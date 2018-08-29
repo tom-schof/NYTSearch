@@ -20,6 +20,10 @@ padding-top: 25px;
     margin-left: 8%;
 }
 
+.col-md-12 {
+    padding-right: 7%;
+}
+
 .sidenav-trigger {
   color: #26a69a;
 }

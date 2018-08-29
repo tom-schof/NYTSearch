@@ -52,5 +52,6 @@ function searchNYT() {
 
 $("#search-articles").on("click", function (event) {
     event.preventDefault();
+    $("#top-articles").empty();
     searchNYT();
 });

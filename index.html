@@ -1,88 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-     
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-      
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/main.css" />-->
-    
+
+    <title>NYT Search</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/main.css" />
+
+
 </head>
+
 <body>
-  
-  <h1>New York Times Search</h1>
-  
-<div class="row">
-  <form id="article-search" class="col s12">
-      <h3>Search Parameters</h3>
-      
-      <div class="row">
-        <div class="input-field col s11">
-      
-      <label for="search-term">Search Term: </label>
-      <input type="text" id="search-term">
-      
-      </div>
-      </div>
-      
-      <div class="row">
-        <div class="input-field col s11">
-    <select id="record-num">
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-      <option value="4">Option 4</option>
-      <option value="5">Option 5</option>
-      <option value="6">Option 6</option>
-      <option value="7">Option 7</option>
-      
+
+    <h1>New York Times Search</h1>
+
+    <div class="row">
+        <form id="article-search" class="col s12">
+            <h3>Search Parameters</h3>
+
+            <div class="row">
+                <div class="input-field col s11">
+
+                    <label for="search-term">Search Term: </label>
+                    <input type="text" id="search-term">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s11">
+
+
+                    <select id="record-num">
+      <option value="" disabled selected></option>
+      <option value="1">1</option>
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="7">7</option>
     </select>
-    <label for="record-num">Number of Records to Retrieve: </label>
-  </div>
-      
-      </div>
-      
-      <div class="row">
-        <div class="input-field col s11">
-      
-      <label for="search-term">Start Year (Optional): </label>
-      <input type="text" id="search-term">
-      
-      </div>
-      </div>
-      
-      <div class="row">
-        <div class="input-field col s11">
-      
-      <label for="search-term">End Year (Optional): </label>
-      <input type="text" id="search-term">
-      
-      </div>
-      </div>
-      
-      <input id="search-articles" type="submit" value="Search">
-      <input type="reset" value="Clear Results">
-  </form>
-  
-  
+                    <label for="record-num">Number of Records to Retrieve: </label>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="input-field col s11">
+
+                    <label for="search-term">Start Year (Optional): </label>
+                    <input type="text" id="search-term">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s11">
+
+                    <label for="search-term">End Year (Optional): </label>
+                    <input type="text" id="search-term">
+
+                </div>
+            </div>
+
+            <input id="search-articles" type="submit" value="Search">
+            <input type="reset" value="Clear Results">
+        </form>
+
+    </div>
     
-  </div>
-   
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <div class="row" id="top-articles"></div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js">
+    </script>
+-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+
     <script src="./assets/javascript/script.js"></script>
     <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
         
-        $(document).ready(function(){
-    $('select').formSelect();
-  });
-    
+        
+(function($){
+  $(function(){
+
+    $('.sidenav').sidenav();
+    $('.parallax').parallax();
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
+
     </script>
+
+
 </body>
+
 </html>

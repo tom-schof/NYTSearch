@@ -32,9 +32,17 @@ function searchNYT() {
         url: url,
         method: 'GET',
     }).done(function (result) {
+       
         console.log(result);
+        var docs = result.response.docs;
 
-        $("#top-articles").text(JSON.stringify(result));
+        for (var i = 0; i < docs.length; i++){
+            var P = $("<p>");
+            P.text(JSON.stringify(docs[i].snippet));
+
+            $("#top-articles").append(P);
+        }
+        
     }).fail(function (err) {
         throw err;
     });

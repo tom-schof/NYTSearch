@@ -1,6 +1,6 @@
-var q = $("#search-term").val().trim();
-var begin_date = $("#start-year").val().trim();
-var end_date = $("#end-year").val().trim();
+var q = $("#search-term").val();
+var begin_date = $("#start-year").val();
+var end_date = $("#end-year").val();
 
 
 
@@ -8,7 +8,7 @@ var params = {
     'api-key': "69e810d940ea4558a3e8a2011b10c804",
 };
 
-if (q != null) {
+if (q != "") {
     params['q'] = q;
 }
 
@@ -33,6 +33,8 @@ function searchNYT() {
         method: 'GET',
     }).done(function (result) {
         console.log(result);
+
+        $("#top-articles").text(JSON.stringify(result));
     }).fail(function (err) {
         throw err;
     });

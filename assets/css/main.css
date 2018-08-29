@@ -3,8 +3,21 @@ nav .brand-logo {
   color: #444;
 }
 
+h1 {
+    text-align: center;
+}
+
 p {
   line-height: 2rem;
+}
+
+img {
+    height: 100px;
+padding-top: 25px;
+}
+
+.row {
+    margin-left: 8%;
 }
 
 .sidenav-trigger {
